@@ -1,0 +1,13 @@
+<?php
+/**
+ * Created by: HungDang
+ * Filename: Index.php
+ * Date: 10/13/2017
+ * Desription:
+ */
+
+class Index extends CI_Controller{
+	public function index(){
+		$this->load->view('Index/index');
+	}
+}
