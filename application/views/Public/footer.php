@@ -17,3 +17,5 @@
 <script src="/public/js/imagesloaded.pkgd.min.js"></script>
 <script src="/public/js/swiper.jquery.min.js"></script>
 <script src="/public/js/app.js"></script>
+</body>
+</html>
