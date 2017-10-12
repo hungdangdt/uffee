@@ -30,7 +30,7 @@
 		<!-- Logo change per events ecard_logo_{category_code_name}.png
 		if not exit return ecard_logo_.png
 		-->
-		<img src="images/ecard_logo.png" alt="">
+		<img src="/public/images/ecard_logo.png" alt="">
 	</a>
 	<!-- Navigation can edit on AdminCP -->
 	<nav class="m-hide">
@@ -63,29 +63,29 @@
 		<!-- Get all category with thumb images -->
 		<div class="gallery col-lg-3 col-md-6 col-sm-6">
 			<a href="category.html" title="Gategory Name">
-				<div class="image-shadow img-fluid" style="background-image:url(images/20-11.jpg)">
-					<img src="images/20-11.jpg" alt="Gategory Name" class="img-fluid">
+				<div class="image-shadow img-fluid" style="background-image:url(/public/images/20-11.jpg)">
+					<img src="/public/images/20-11.jpg" alt="Gategory Name" class="img-fluid">
 				</div>
 			</a>
 		</div>
 		<div class="gallery col-lg-3 col-md-6 col-sm-6">
 			<a href="category.html" title="Gategory Name">
-				<div class="image-shadow img-fluid" style="background-image:url(images/2.jpg)">
-					<img src="images/2.jpg" alt="Gategory Name" class="img-fluid">
+				<div class="image-shadow img-fluid" style="background-image:url(/public/images/2.jpg)">
+					<img src="/public/images/2.jpg" alt="Gategory Name" class="img-fluid">
 				</div>
 			</a>
 		</div>
 		<div class="gallery col-lg-3 col-md-6 col-sm-6">
 			<a href="category.html" title="Gategory Name">
-				<div class="image-shadow img-fluid" style="background-image:url(images/3.jpg)">
-					<img src="images/3.jpg" alt="Gategory Name" class="img-fluid">
+				<div class="image-shadow img-fluid" style="background-image:url(/public/images/3.jpg)">
+					<img src="/public/images/3.jpg" alt="Gategory Name" class="img-fluid">
 				</div>
 			</a>
 		</div>
 		<div class="gallery col-lg-3 col-md-6 col-sm-6">
 			<a href="category.html" title="Gategory Name">
-				<div class="image-shadow img-fluid" style="background-image:url(images/4.jpg)">
-					<img src="images/4.jpg" alt="Gategory Name" class="img-fluid">
+				<div class="image-shadow img-fluid" style="background-image:url(/public/images/4.jpg)">
+					<img src="/public/images/4.jpg" alt="Gategory Name" class="img-fluid">
 				</div>
 			</a>
 		</div>
