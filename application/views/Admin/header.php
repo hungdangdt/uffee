@@ -19,7 +19,7 @@
     <!--======= end meta =======-->
 
     <!--======= style =======-->
-    <link type="text/css" rel="stylesheet" href="assets/css/components.css"/>
+    <link type="text/css" rel="stylesheet" href="../assets/css/components.css"/>
     <link type="text/css" rel="stylesheet" href="assets/css/custom.css"/>
     <?php
     if (!empty($style) AND is_array($style)) {
