@@ -19,8 +19,8 @@
     <!--======= end meta =======-->
 
     <!--======= style =======-->
-    <link type="text/css" rel="stylesheet" href="../assets/css/components.css"/>
-    <link type="text/css" rel="stylesheet" href="assets/css/custom.css"/>
+    <link type="text/css" rel="stylesheet" href="public/admin/csscomponents.css"/>
+    <link type="text/css" rel="stylesheet" href="public/admin/csscustom.css"/>
     <?php
     if (!empty($style) AND is_array($style)) {
         foreach ($style as $v) {

@@ -16,22 +16,22 @@ class Admin extends CI_Controller{
     public function index(){
         $data = array(
             'styles' => array(
-                "<link type='text/css' rel='stylesheet' href='{APPPATH}/views/Admin/assets/vendors/chartist/css/chartist.min.css'/>",
-                "<link type='text/css' rel='stylesheet' href='{APPPATH}/views/Admin/assets/vendors/circliful/css/jquery.circliful.css'>",
-                "<link type='text/css' rel='stylesheet' href='{APPPATH}/views/Admin/assets/css/pages/index.css'>",
-                "<link type='text/css' rel='stylesheet' href='{APPPATH}/views/Admin/assets/#' id='skin_change'/>",
+                "<link type='text/css' rel='stylesheet' href='public/admin/vendors/chartist/css/chartist.min.css'/>",
+                "<link type='text/css' rel='stylesheet' href='public/admin/vendors/circliful/css/jquery.circliful.css'>",
+                "<link type='text/css' rel='stylesheet' href='public/admin/css/pages/index.css'>",
+                "<link type='text/css' rel='stylesheet' href='public/admin/#' id='skin_change'/>",
             ),
             'script' => array(
-                "<script type='text/javascript' src='{APPPATH}/views/Admin/assets/vendors/countUp.js/js/countUp.min.js'></script>",
-                "<script type='text/javascript' src='{APPPATH}/views/Admin/assets/vendors/flip/js/jquery.flip.min.js'></script>",
-                "<script type='text/javascript' src='{APPPATH}/views/Admin/assets/js/pluginjs/jquery.sparkline.js'></script>",
-                "<script type='text/javascript' src='{APPPATH}/views/Admin/assets/vendors/chartist/js/chartist.min.js'></script>",
-                "<script type='text/javascript' src='{APPPATH}/views/Admin/assets/js/pluginjs/chartist-tooltip.js'></script>",
-                "<script type='text/javascript' src='{APPPATH}/views/Admin/assets/vendors/swiper/js/swiper.min.js'></script>",
-                "<script type='text/javascript' src='{APPPATH}/views/Admin/assets/vendors/circliful/js/jquery.circliful.min.js'></script>",
-                "<script type='text/javascript' src='{APPPATH}/views/Admin/assets/vendors/flotchart/js/jquery.flot.js' ></script>",
-                "<script type='text/javascript' src='{APPPATH}/views/Admin/assets/vendors/flotchart/js/jquery.flot.resize.js'></script>",
-                "<script type='text/javascript' src='{APPPATH}/views/Admin/assets/js/pages/index.js'></script>",    
+                "<script type='text/javascript' src='public/admin/vendors/countUp.js/js/countUp.min.js'></script>",
+                "<script type='text/javascript' src='public/admin/vendors/flip/js/jquery.flip.min.js'></script>",
+                "<script type='text/javascript' src='public/admin/js/pluginjs/jquery.sparkline.js'></script>",
+                "<script type='text/javascript' src='public/admin/vendors/chartist/js/chartist.min.js'></script>",
+                "<script type='text/javascript' src='public/admin/js/pluginjs/chartist-tooltip.js'></script>",
+                "<script type='text/javascript' src='public/admin/vendors/swiper/js/swiper.min.js'></script>",
+                "<script type='text/javascript' src='public/admin/vendors/circliful/js/jquery.circliful.min.js'></script>",
+                "<script type='text/javascript' src='public/admin/vendors/flotchart/js/jquery.flot.js' ></script>",
+                "<script type='text/javascript' src='public/admin/vendors/flotchart/js/jquery.flot.resize.js'></script>",
+                "<script type='text/javascript' src='public/admin/js/pages/index.js'></script>",    
             ),
         );
         $this->load->view('Admin/index',$data);
