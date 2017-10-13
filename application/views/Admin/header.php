@@ -19,8 +19,8 @@
     <!--======= end meta =======-->
 
     <!--======= style =======-->
-    <link type="text/css" rel="stylesheet" href="css/components.css"/>
-    <link type="text/css" rel="stylesheet" href="css/custom.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/components.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/custom.css"/>
     <?php
     if (!empty($style) AND is_array($style)) {
         foreach ($style as $v) {
@@ -48,7 +48,7 @@
   top: 48%;
   background-position: center;
 z-index: 999999">
-        <img src="img/loader.gif" style=" width: 50px;" alt="loading...">
+        <img src="assets/img/loader.gif" style=" width: 50px;" alt="loading...">
     </div>
 </div>
 <!--======= END .preload =======-->
