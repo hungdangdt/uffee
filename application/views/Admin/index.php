@@ -6,7 +6,7 @@
  * Time: 10:42 AM
  */
 /*========================================*/
-if (file_exists('header.php')) include_once 'header.php';
+$this->load->view('Admin/header');
 ?>
     <!--======= .wrapper =======-->
     <div class="wrapper">
@@ -722,7 +722,7 @@ if (file_exists('header.php')) include_once 'header.php';
             </div>
         </div>
         <!--======= END #left =======-->
-        <?php if (file_exists('left.php')) include_once 'left.php';?>
+        <?php $this->load->view('Admin/left');?>
         <!--======= #content =======-->
         <div id="content" class="bg-container">
             <!--======= .head =======-->
@@ -1218,4 +1218,4 @@ if (file_exists('header.php')) include_once 'header.php';
     </div>
     <!--======= END .wrapper =======-->
 <?php
-if (file_exists('footer.php')) include_once 'footer.php';
+$this->load->view('Admin/footer');
