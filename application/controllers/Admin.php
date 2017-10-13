@@ -15,6 +15,5 @@ class Admin extends CI_Controller{
 
     public function index(){
         $this->load->view('Admin/index');
-        $this->load->view('Admin/index');
     }
 }
