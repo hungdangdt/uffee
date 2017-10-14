@@ -53,13 +53,13 @@ z-index: 999999">
                         </h3>
                     </div>
                     <div class="bg-white login_content login_border_radius">
-                        <form action="index.html" id="login_validator" method="post" class="login_validator">
+                        <form action="/admin/login" id="login_validator" method="post" class="login_validator">
                             <div class="form-group">
                                 <label for="email" class="col-form-label"> E-mail</label>
                                 <div class="input-group">
                                     <span class="input-group-addon input_email"><i
                                             class="fa fa-envelope text-primary"></i></span>
-                                    <input type="text" class="form-control  form-control-md" id="email" name="username" placeholder="E-mail">
+                                    <input type="text" class="form-control  form-control-md" id="email" name="email" placeholder="E-mail">
                                 </div>
                             </div>
                             <!--</h3>-->
@@ -68,7 +68,7 @@ z-index: 999999">
                                 <div class="input-group">
                                     <span class="input-group-addon addon_password"><i
                                             class="fa fa-lock text-primary"></i></span>
-                                    <input type="password" class="form-control form-control-md" id="password"   name="password" placeholder="Password">
+                                    <input type="password" class="form-control form-control-md" id="password" name="password" placeholder="Password">
                                 </div>
                             </div>
                             <div class="form-group">

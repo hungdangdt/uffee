@@ -42,6 +42,16 @@ class Admin extends CI_Controller{
     }
 
     public function login(){
+        /**
+         * Check Login Submit
+        */
+        if(!empty($_POST)){
+            $this->cdebug->showDebug($_POST);
+        }
+
+        /**
+         * Load index
+        */
         $data = array(
             'style' => array(
                 "<link type='text/css' rel='stylesheet' href='public/admin/css/components.css'/>",
