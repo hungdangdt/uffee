@@ -8,7 +8,7 @@
 
 /*========================================*/
 
-class Cdebug_library
+class Cdebug
 {
     var $CI = '';
 
