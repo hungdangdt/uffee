@@ -13,15 +13,15 @@
 <head>
     <title>Login 1 | Admire</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="shortcut icon" href="public/admin/img/logo1.ico"/>
+    <link rel="shortcut icon" href="/public/admin/img/logo1.ico"/>
     <!--Global styles -->
-    <link type="text/css" rel="stylesheet" href="public/admin/css/components.css" />
-    <link type="text/css" rel="stylesheet" href="public/admin/css/custom.css" />
+    <link type="text/css" rel="stylesheet" href="/public/admin/css/components.css" />
+    <link type="text/css" rel="stylesheet" href="/public/admin/css/custom.css" />
     <!--End of Global styles -->
     <!--Plugin styles-->
-    <link type="text/css" rel="stylesheet" href="public/admin/vendors/bootstrapvalidator/public/admin/css/bootstrapValidator.min.css"/>
-    <link type="text/css" rel="stylesheet" href="public/admin/vendors/wow/public/admin/css/animate.css"/>
-    <link type="text/css" rel="stylesheet" href="public/admin/css/pages/login1.css"/>
+    <link type="text/css" rel="stylesheet" href="/public/admin/vendors/bootstrapvalidator//public/admin/css/bootstrapValidator.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/public/admin/vendors/wow//public/admin/css/animate.css"/>
+    <link type="text/css" rel="stylesheet" href="/public/admin/css/pages/login1.css"/>
 </head>
 <body>
 <div class="preloader" style=" position: fixed;
@@ -39,7 +39,7 @@
   top: 48%;
   background-position: center;
 z-index: 999999">
-        <img src="public/admin/img/loader.gif" style=" width: 40px;" alt="loading...">
+        <img src="/public/admin/img/loader.gif" style=" width: 40px;" alt="loading...">
     </div>
 </div>
 <div class="container wow fadeInDown" data-wow-delay="0.5s" data-wow-duration="2s">
@@ -49,7 +49,7 @@ z-index: 999999">
                 <div class="col-lg-8 push-lg-2 col-md-10 push-md-1 col-sm-12">
                     <div class="login_logo login_border_radius1">
                         <h3 class="text-center">
-                            <img src="public/admin/img/logow2.png" alt="josh logo" class="admire_logo"><span class="text-white"> ADMIRE &nbsp;<br/>
+                            <img src="/public/admin/img/logow2.png" alt="josh logo" class="admire_logo"><span class="text-white"> ADMIRE &nbsp;<br/>
                                 Log In</span>
                         </h3>
                     </div>
@@ -121,14 +121,14 @@ z-index: 999999">
     </div>
 </div>
 <!-- global js -->
-<script type="text/javascript" src="public/admin/js/jquery.min.js"></script>
-<script type="text/javascript" src="public/admin/js/tether.min.js"></script>
-<script type="text/javascript" src="public/admin/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/public/admin/js/jquery.min.js"></script>
+<script type="text/javascript" src="/public/admin/js/tether.min.js"></script>
+<script type="text/javascript" src="/public/admin/js/bootstrap.min.js"></script>
 <!-- end of global js-->
 <!--Plugin js-->
-<script type="text/javascript" src="public/admin/vendors/bootstrapvalidator/public/admin/js/bootstrapValidator.min.js"></script>
-<script type="text/javascript" src="public/admin/vendors/wow/public/admin/js/wow.min.js"></script>
-<script type="text/javascript" src="public/admin/js/pages/login1.js"></script>
+<script type="text/javascript" src="/public/admin/vendors/bootstrapvalidator//public/admin/js/bootstrapValidator.min.js"></script>
+<script type="text/javascript" src="/public/admin/vendors/wow//public/admin/js/wow.min.js"></script>
+<script type="text/javascript" src="/public/admin/js/pages/login1.js"></script>
 </body>
 
 </html>
