@@ -15,7 +15,7 @@ class Admin extends CI_Controller{
 
     public function index(){
         $data = array(
-            'styles' => array(
+            'style' => array(
                 "<link type='text/css' rel='stylesheet' href='public/admin/vendors/chartist/css/chartist.min.css'/>",
                 "<link type='text/css' rel='stylesheet' href='public/admin/vendors/circliful/css/jquery.circliful.css'>",
                 "<link type='text/css' rel='stylesheet' href='public/admin/css/pages/index.css'>",
