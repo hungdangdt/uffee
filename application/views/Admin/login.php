@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login 1 | Admire</title>
+    <title>Ecard Daflon Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="shortcut icon" href="/public/admin/img/logo1.ico"/>
     <!--Global styles -->
