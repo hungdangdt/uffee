@@ -49,7 +49,7 @@ z-index: 999999">
                 <div class="col-lg-8 push-lg-2 col-md-10 push-md-1 col-sm-12">
                     <div class="login_logo login_border_radius1">
                         <h3 class="text-center">
-                            <img src="/public/images/ecard_logo.png" alt="josh logo" class="admire_logo"><br /><span class="text-white">Log In</span>
+                            <img src="/public/images/ecard_logo.png" alt="josh logo" style="width: 30%; padding-top: 10px;">
                         </h3>
                     </div>
                     <div class="bg-white login_content login_border_radius">
