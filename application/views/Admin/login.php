@@ -49,7 +49,7 @@ z-index: 999999">
                 <div class="col-lg-8 push-lg-2 col-md-10 push-md-1 col-sm-12">
                     <div class="login_logo login_border_radius1">
                         <h3 class="text-center">
-                            <img src="/public/admin/img/logo1.ico" alt="josh logo" class="admire_logo"><span class="text-white"> ADMIRE &nbsp;<br/>
+                            <img src="/public/admin/img/logo1.ico" alt="josh logo" class="admire_logo"><span class="text-white"> ADMIRE ADMIN<br/>
                                 Log In</span>
                         </h3>
                     </div>
