@@ -11,7 +11,8 @@ class Admin extends CI_Controller{
     function __construct()
     {
         parent::__construct();
-        $this->load->library('Cdebug');
+        $this->load->library('cdebug');
+        $this->load->model('admin');
     }
 
     public function index(){
@@ -54,7 +55,12 @@ class Admin extends CI_Controller{
             //Check email and password
             if(!empty($p_email) AND !empty($p_password)){
                 //check user exist and right password
+                $iUser = $this->admin->getUser($p_email,md5($p_password));
+                if(!empty($iUser)){
 
+                }else{
+                    $this->cdebug->dieDebug('No User');
+                }
             }
         }
 

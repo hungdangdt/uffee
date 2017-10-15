@@ -27,4 +27,16 @@ class Cdebug
             }
         }
     }
+
+    function dieDebug(){
+        if(func_num_args() > 0 AND DEBUG_MODE){
+            foreach(func_get_args() as $k=>$v){
+                echo '<pre>';
+                echo "$k =>";
+                echo print_r($v);
+                echo '</pre>';
+            }
+        }
+        die;
+    }
 }
