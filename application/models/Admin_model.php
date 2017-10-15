@@ -21,7 +21,7 @@ class Admin_model extends CI_Model{
             'email' => $userEmail,
             'password' => $userPass
         );
-        $this->db->get_where($array_where);
+        $this->db->where($array_where);
         $query = $this->db->get("ec_user");
         if($query->num_rows() >= 1){
             return $query->row_array();
