@@ -15,8 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="shortcut icon" href="/public/admin/img/logo1.ico"/>
     <!--Global styles -->
-    <link type="text/css" rel="stylesheet" href="/public/admin/css/components.css" />
-    <link type="text/css" rel="stylesheet" href="/public/admin/css/custom.css" />
+    <link type="text/css" rel="stylesheet" href="/public/admin/css/components.css"/>
+    <link type="text/css" rel="stylesheet" href="/public/admin/css/custom.css"/>
     <!--End of Global styles -->
     <!--Plugin styles-->
     <link type="text/css" rel="stylesheet" href="/public/admin/vendors/bootstrapvalidator/css/bootstrapValidator.min.css"/>
@@ -58,7 +58,7 @@ z-index: 999999">
                                 <label for="email" class="col-form-label"> E-mail</label>
                                 <div class="input-group">
                                     <span class="input-group-addon input_email"><i
-                                            class="fa fa-envelope text-primary"></i></span>
+                                                class="fa fa-envelope text-primary"></i></span>
                                     <input type="text" class="form-control  form-control-md" id="email" name="email" placeholder="E-mail">
                                 </div>
                             </div>
@@ -67,7 +67,7 @@ z-index: 999999">
                                 <label for="password" class="col-form-label">Password</label>
                                 <div class="input-group">
                                     <span class="input-group-addon addon_password"><i
-                                            class="fa fa-lock text-primary"></i></span>
+                                                class="fa fa-lock text-primary"></i></span>
                                     <input type="password" class="form-control form-control-md" id="password" name="password" placeholder="Password">
                                 </div>
                             </div>
@@ -78,21 +78,22 @@ z-index: 999999">
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-6">
-                                    <label class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input form-control">
-                                        <span class="custom-control-indicator"></span>
-                                        <a class="custom-control-description">Keep me logged in</a>
-                                    </label>
-                                </div>
-                                <div class="col-6 text-right forgot_pwd">
-                                    <a href="forgot_password1.html" class="custom-control-description forgottxt_clr">Forgot password?</a>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" name="slogin" class="custom-control-input form-control">
+                                            <span class="custom-control-indicator"></span>
+                                            <a class="custom-control-description">Keep me logged in</a>
+                                        </label>
+                                    </div>
+                                    <div class="col-6 text-right forgot_pwd">
+                                        <a href="forgot_password1.html" class="custom-control-description forgottxt_clr">Forgot password?</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

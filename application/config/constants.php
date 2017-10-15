@@ -15,6 +15,17 @@ defined('SHOW_DEBUG_BACKTRACE') OR define('SHOW_DEBUG_BACKTRACE', TRUE);
 
 /*
 |--------------------------------------------------------------------------
+| Debug Mode
+|--------------------------------------------------------------------------
+|
+| If set to TRUE, all debug step will be show on screen.
+|
+*/
+defined('DEBUG_MODE') OR define('DEBUG_MODE',TRUE);
+
+
+/*
+|--------------------------------------------------------------------------
 | File and Directory Modes
 |--------------------------------------------------------------------------
 |
