@@ -7,14 +7,26 @@
  */
 /*========================================*/
 
+/**
+ * Class Admin
+ * @property Admin admin_control
+ * @property Admin_model admin_model
+ */
 class Admin extends CI_Controller{
+    /**
+     * Admin constructor.
+     */
     function __construct()
     {
         parent::__construct();
         $this->load->library('cdebug');
         $this->load->model('admin_model');
+        $this->load->helper('cookie');
     }
 
+    /**
+     *
+     */
     public function index(){
         $data = array(
             'style' => array(
@@ -43,7 +55,11 @@ class Admin extends CI_Controller{
         $this->load->view('Admin/index',$data);
     }
 
+    /**
+     *
+     */
     public function login(){
+        $errors = array();
         /**
          * Check Login Submit
         */
@@ -57,9 +73,9 @@ class Admin extends CI_Controller{
                 //check user exist and right password
                 $iUser = $this->admin_model->getUser($p_email,md5($p_password));
                 if(!empty($iUser)){
-
+                    $this->input->set_cookie('userInfo',json_encode($iUser,JSON_UNESCAPED_UNICODE));
                 }else{
-                    $this->cdebug->dieDebug('No User');
+                    $errors[] = 'Email và mật khẩu không đúng. Vui lòng kiểm tra và thử lại';
                 }
             }
         }
@@ -84,6 +100,8 @@ class Admin extends CI_Controller{
                 "<script type='text/javascript' src='public/admin/js/pages/login1.js'></script>",
             ),
         );
+        //set error to display
+        $data['errors'] = $errors;
         $this->load->view('Admin/login',$data);
     }
 }

@@ -53,6 +53,15 @@ z-index: 999999">
                         </h3>
                     </div>
                     <div class="bg-white login_content login_border_radius">
+                        <ul>
+                        <?php
+                            if(!empty($errors)){
+                                foreach ($errors as $error){
+                                    echo $error;
+                                }
+                            }
+                        ?>
+                        </ul>
                         <form action="/admin/login" id="login_validator" method="post" class="login_validator">
                             <div class="form-group">
                                 <label for="email" class="col-form-label"> E-mail</label>
