@@ -7,12 +7,16 @@
  */
 /*========================================*/
 if(!function_exists('checkLogin')) {
+    /**
+     * @return bool
+     */
     function checkLogin()
     {
         $CI =& get_instance();
+        $CI->load->library('cdebug');
         $logged = false;
         $iUser = $CI->session->userdata('iUser');
-        $this->CI->cdebug->dieDebug(json_decode($iUser,true));
+        $CI->cdebug->dieDebug(json_decode($iUser,true));
         if (!empty($iUser)) {
             if ($iUser['status'] == 'online') {
                 if (strtotime($iUser['time']) - time() <= 24) {
@@ -28,7 +32,10 @@ if(!function_exists('checkLogin')) {
 }
 
 if(!function_exists('logout')) {
-    function logout()
+    /**
+     *
+     */
+    function ulogout()
     {
         $CI =& get_instance();
         $CI->session->sess_destroy();

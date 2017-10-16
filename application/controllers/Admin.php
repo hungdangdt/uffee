@@ -113,4 +113,8 @@ class Admin extends CI_Controller{
         $data['errors'] = $errors;
         $this->load->view('Admin/login',$data);
     }
+
+    function logout(){
+        logout();
+    }
 }
