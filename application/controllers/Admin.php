@@ -28,7 +28,7 @@ class Admin extends CI_Controller{
      *
      */
     public function index(){
-        $this->login->checkLogin();
+        checkLogin();
         $data = array(
             'style' => array(
                 "<link type='text/css' rel='stylesheet' href='public/admin/css/components.css'/>",
@@ -81,7 +81,7 @@ class Admin extends CI_Controller{
                         'status' => 'online',
                         'time' => time(),
                     );
-                    $this->session->set_userdata('iUser',json_encode($iUser));
+                    $this->session->set_userdata('iUser',json_encode($sUser));
                     redirect('/admin');
                 }else{
                     $errors[] = 'Email và mật khẩu không đúng. Vui lòng kiểm tra và thử lại';
