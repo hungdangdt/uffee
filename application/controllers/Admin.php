@@ -11,6 +11,7 @@
  * Class Admin
  * @property Admin admin_control
  * @property Admin_model admin_model
+ * @property CI_Session session
  */
 class Admin extends CI_Controller{
     /**
@@ -25,30 +26,26 @@ class Admin extends CI_Controller{
     /**
      *
      */
-    public function index(){
+    function index(){
         checkLogin();
         $data = array(
             'style' => array(
-                "<link type='text/css' rel='stylesheet' href='public/admin/css/components.css'/>",
-                "<link type='text/css' rel='stylesheet' href='public/admin/css/custom.css'/>",
-                "<link type='text/css' rel='stylesheet' href='public/admin/vendors/chartist/css/chartist.min.css'/>",
-                "<link type='text/css' rel='stylesheet' href='public/admin/vendors/circliful/css/jquery.circliful.css'>",
-                "<link type='text/css' rel='stylesheet' href='public/admin/css/pages/index.css'>",
-                "<link type='text/css' rel='stylesheet' href='public/admin/#' id='skin_change'/>",
+                "<link type='text/css' rel='stylesheet' href='/public/admin/vendors/chartist/css/chartist.min.css'/>",
+                "<link type='text/css' rel='stylesheet' href='/public/admin/vendors/circliful/css/jquery.circliful.css'>",
+                "<link type='text/css' rel='stylesheet' href='/public/admin/css/pages/index.css'>",
+                "<link type='text/css' rel='stylesheet' href='#' id='skin_change'/>",
             ),
             'script' => array(
-                "<script type='text/javascript' src='public/admin/js/components.js'></script>",
-                "<script type='text/javascript' src='public/admin/js/custom.js'></script>",
-                "<script type='text/javascript' src='public/admin/vendors/countUp.js/js/countUp.min.js'></script>",
-                "<script type='text/javascript' src='public/admin/vendors/flip/js/jquery.flip.min.js'></script>",
-                "<script type='text/javascript' src='public/admin/js/pluginjs/jquery.sparkline.js'></script>",
-                "<script type='text/javascript' src='public/admin/vendors/chartist/js/chartist.min.js'></script>",
-                "<script type='text/javascript' src='public/admin/js/pluginjs/chartist-tooltip.js'></script>",
-                "<script type='text/javascript' src='public/admin/vendors/swiper/js/swiper.min.js'></script>",
-                "<script type='text/javascript' src='public/admin/vendors/circliful/js/jquery.circliful.min.js'></script>",
-                "<script type='text/javascript' src='public/admin/vendors/flotchart/js/jquery.flot.js' ></script>",
-                "<script type='text/javascript' src='public/admin/vendors/flotchart/js/jquery.flot.resize.js'></script>",
-                "<script type='text/javlologinđdascript' src='public/admin/js/pages/index.js'></script>",
+                "<script type='text/javascript' src='/public/admin/vendors/countUp.js/js/countUp.min.js'></script>",
+                "<script type='text/javascript' src='/public/admin/vendors/flip/js/jquery.flip.min.js'></script>",
+                "<script type='text/javascript' src='/public/admin/js/pluginjs/jquery.sparkline.js'></script>",
+                "<script type='text/javascript' src='/public/admin/vendors/chartist/js/chartist.min.js'></script>",
+                "<script type='text/javascript' src='/public/admin/js/pluginjs/chartist-tooltip.js'></script>",
+                "<script type='text/javascript' src='/public/admin/vendors/swiper/js/swiper.min.js'></script>",
+                "<script type='text/javascript' src='/public/admin/vendors/circliful/js/jquery.circliful.min.js'></script>",
+                "<script type='text/javascript' src='/public/admin/vendors/flotchart/js/jquery.flot.js' ></script>",
+                "<script type='text/javascript' src='/public/admin/vendors/flotchart/js/jquery.flot.resize.js'></script>",
+                "<script type='text/javascript' src='/public/admin/js/pages/index.js'></script>",
             ),
         );
         $this->load->view('Admin/index',$data);
@@ -57,7 +54,7 @@ class Admin extends CI_Controller{
     /**
      *
      */
-    public function login(){
+    function login(){
         $errors = array();
         /**
          * Check Login Submit
@@ -66,7 +63,7 @@ class Admin extends CI_Controller{
             $p_email = !empty($_POST['email'])?$_POST['email']:null;
             $p_password = !empty($_POST['password'])?$_POST['password']:null;
             $p_slogin = !empty($_POST['slogin'])?$_POST['slogin']:null;
-            dieDebug(md5($p_password));
+            showDebug(md5($p_password));
             //Check email and password
             if(!empty($p_email) AND !empty($p_password)){
                 //check user exist and right password
@@ -75,6 +72,7 @@ class Admin extends CI_Controller{
                     $sUser = array(
                         'id' => $iUser['id'],
                         'email' => $iUser['email'],
+                        'name' => $iUser['name'],
                         'level' => $iUser['level'],
                         'status' => 'online',
                         'time' => time(),
@@ -92,19 +90,19 @@ class Admin extends CI_Controller{
         */
         $data = array(
             'style' => array(
-                "<link type='text/css' rel='stylesheet' href='public/admin/css/components.css'/>",
-                "<link type='text/css' rel='stylesheet' href='public/admin/css/custom.css'/>",
-                "<link type='text/css' rel='stylesheet' href='public/admin/vendors/bootstrapvalidator/css/bootstrapValidator.min.css'/>",
-                "<link type='text/css' rel='stylesheet' href='public/admin/vendors/wow/css/animate.css'>",
-                "<link type='text/css' rel='stylesheet' href='public/admin/css/pages/login1.css'>",
+                "<link type='text/css' rel='stylesheet' href='/public/admin/css/components.css'/>",
+                "<link type='text/css' rel='stylesheet' href='/public/admin/css/custom.css'/>",
+                "<link type='text/css' rel='stylesheet' href='/public/admin/vendors/bootstrapvalidator/css/bootstrapValidator.min.css'/>",
+                "<link type='text/css' rel='stylesheet' href='/public/admin/vendors/wow/css/animate.css'>",
+                "<link type='text/css' rel='stylesheet' href='/public/admin/css/pages/login1.css'>",
             ),
             'script' => array(
-                "<script type='text/javascript' src='public/admin/js/jquery.min.js'></script>",
-                "<script type='text/javascript' src='public/admin/js/tether.min.js'></script>",
-                "<script type='text/javascript' src='public/admin/js/bootstrap.min.js'></script>",
-                "<script type='text/javascript' src='public/admin/vendors/bootstrapvalidator/js/bootstrapValidator.min.js'></script>",
-                "<script type='text/javascript' src='public/admin/vendors/wow/js/wow.min.js'></script>",
-                "<script type='text/javascript' src='public/admin/js/pages/login1.js'></script>",
+                "<script type='text/javascript' src='/public/admin/js/jquery.min.js'></script>",
+                "<script type='text/javascript' src='/public/admin/js/tether.min.js'></script>",
+                "<script type='text/javascript' src='/public/admin/js/bootstrap.min.js'></script>",
+                "<script type='text/javascript' src='/public/admin/vendors/bootstrapvalidator/js/bootstrapValidator.min.js'></script>",
+                "<script type='text/javascript' src='/public/admin/vendors/wow/js/wow.min.js'></script>",
+                "<script type='text/javascript' src='/public/admin/js/pages/login1.js'></script>",
             ),
         );
         //set error to display
@@ -115,4 +113,9 @@ class Admin extends CI_Controller{
     function logout(){
         ulogout();
     }
+
+    function users(){
+
+    }
+
 }

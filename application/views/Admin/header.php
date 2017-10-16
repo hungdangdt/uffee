@@ -12,17 +12,20 @@
     <?php
     if (!empty($meta) AND is_array($meta)) {
         foreach ($meta as $v) {
-            echo $v;
+            echo chr(9).$v.chr(10);
         }
     }
     ?>
     <!--======= end meta =======-->
 
     <!--======= style =======-->
+    <link type='text/css' rel='stylesheet' href='/public/admin/css/components.css'/>
+    <link type='text/css' rel='stylesheet' href='/public/admin/css/custom.css'/>
+    <!--======= Page style =======-->
     <?php
     if (!empty($style) AND is_array($style)) {
         foreach ($style as $v) {
-            echo $v;
+            echo chr(9).$v.chr(10);
         }
     }
     ?>
@@ -46,7 +49,7 @@
   top: 48%;
   background-position: center;
 z-index: 999999">
-        <img src="public/admin/img/loader.gif" style=" width: 50px;" alt="loading...">
+        <img src="/public/admin/img/loader.gif" style=" width: 50px;" alt="loading...">
     </div>
 </div>
 <!--======= END .preload =======-->
@@ -59,7 +62,7 @@ z-index: 999999">
         <nav class="navbar navbar-static-top">
             <div class="container-fluid m-0">
                 <a class="navbar-brand float-left" href="index.html">
-                    <h4><img src="public/admin/img/logo1.ico" class="admin_img" alt="logo"> ADMIRE ADMIN</h4>
+                    <h4><img src="/public/admin/img/logo1.ico" class="admin_img" alt="logo"> ADMIRE ADMIN</h4>
                 </a>
                 <div class="menu">
                     <span class="toggle-left" id="menu-toggle">
@@ -83,7 +86,7 @@ z-index: 999999">
                                     <div class="data">
                                         <div class="row">
                                             <div class="col-2">
-                                                <img src="public/admin/img/mailbox_imgs/5.jpg" class="message-img avatar rounded-circle"
+                                                <img src="/public/admin/img/mailbox_imgs/5.jpg" class="message-img avatar rounded-circle"
                                                      alt="avatar1"></div>
                                             <div class="col-10 message-data"><strong>hally</strong>
                                                 sent you an image.
@@ -95,7 +98,7 @@ z-index: 999999">
                                     <div class="data">
                                         <div class="row">
                                             <div class="col-2">
-                                                <img src="public/admin/img/mailbox_imgs/8.jpg" class="message-img avatar rounded-circle"
+                                                <img src="/public/admin/img/mailbox_imgs/8.jpg" class="message-img avatar rounded-circle"
                                                      alt="avatar1"></div>
                                             <div class="col-10 message-data"><strong>Meri</strong>
                                                 invitation for party.
@@ -107,7 +110,7 @@ z-index: 999999">
                                     <div class="data">
                                         <div class="row">
                                             <div class="col-2">
-                                                <img src="public/admin/img/mailbox_imgs/7.jpg" class="message-img avatar rounded-circle"
+                                                <img src="/public/admin/img/mailbox_imgs/7.jpg" class="message-img avatar rounded-circle"
                                                      alt="avatar1"></div>
                                             <div class="col-10 message-data">
                                                 <strong>Remo</strong>
@@ -120,7 +123,7 @@ z-index: 999999">
                                     <div class="data">
                                         <div class="row">
                                             <div class="col-2">
-                                                <img src="public/admin/img/mailbox_imgs/6.jpg" class="message-img avatar rounded-circle"
+                                                <img src="/public/admin/img/mailbox_imgs/6.jpg" class="message-img avatar rounded-circle"
                                                      alt="avatar1"></div>
                                             <div class="col-10 message-data">
                                                 <strong>David</strong>
@@ -133,7 +136,7 @@ z-index: 999999">
                                     <div class="data">
                                         <div class="row">
                                             <div class="col-2">
-                                                <img src="public/admin/img/mailbox_imgs/5.jpg" class="message-img avatar rounded-circle"
+                                                <img src="/public/admin/img/mailbox_imgs/5.jpg" class="message-img avatar rounded-circle"
                                                      alt="avatar1"></div>
                                             <div class="col-10 message-data"><strong>hally</strong>
                                                 sent you an image.
@@ -145,7 +148,7 @@ z-index: 999999">
                                     <div class="data">
                                         <div class="row">
                                             <div class="col-2">
-                                                <img src="public/admin/img/mailbox_imgs/8.jpg" class="message-img avatar rounded-circle"
+                                                <img src="/public/admin/img/mailbox_imgs/8.jpg" class="message-img avatar rounded-circle"
                                                      alt="avatar1"></div>
                                             <div class="col-10 message-data"><strong>Meri</strong>
                                                 invitation for party.
@@ -157,7 +160,7 @@ z-index: 999999">
                                     <div class="data">
                                         <div class="row">
                                             <div class="col-2">
-                                                <img src="public/admin/img/mailbox_imgs/7.jpg" class="message-img avatar rounded-circle"
+                                                <img src="/public/admin/img/mailbox_imgs/7.jpg" class="message-img avatar rounded-circle"
                                                      alt="avatar1"></div>
                                             <div class="col-10 message-data">
                                                 <strong>Remo</strong>
@@ -170,7 +173,7 @@ z-index: 999999">
                                     <div class="data">
                                         <div class="row">
                                             <div class="col-2">
-                                                <img src="public/admin/img/mailbox_imgs/6.jpg" class="message-img avatar rounded-circle"
+                                                <img src="/public/admin/img/mailbox_imgs/6.jpg" class="message-img avatar rounded-circle"
                                                      alt="avatar1"></div>
                                             <div class="col-10 message-data">
                                                 <strong>David</strong>
@@ -199,7 +202,7 @@ z-index: 999999">
                                     <div class="data">
                                         <div class="row">
                                             <div class="col-2">
-                                                <img src="public/admin/img/mailbox_imgs/1.jpg" class="message-img avatar rounded-circle"
+                                                <img src="/public/admin/img/mailbox_imgs/1.jpg" class="message-img avatar rounded-circle"
                                                      alt="avatar1"></div>
                                             <div class="col-10 message-data">
                                                 <i class="fa fa-clock-o"></i>
@@ -214,7 +217,7 @@ z-index: 999999">
                                     <div class="data">
                                         <div class="row">
                                             <div class="col-2">
-                                                <img src="public/admin/img/mailbox_imgs/2.jpg" class="message-img avatar rounded-circle"
+                                                <img src="/public/admin/img/mailbox_imgs/2.jpg" class="message-img avatar rounded-circle"
                                                      alt="avatar1"></div>
                                             <div class="col-10 message-data">
                                                 <i class="fa fa-clock-o"></i>
@@ -229,7 +232,7 @@ z-index: 999999">
                                     <div class="data">
                                         <div class="row">
                                             <div class="col-2">
-                                                <img src="public/admin/img/mailbox_imgs/3.jpg" class="message-img avatar rounded-circle"
+                                                <img src="/public/admin/img/mailbox_imgs/3.jpg" class="message-img avatar rounded-circle"
                                                      alt="avatar1"></div>
                                             <div class="col-10 message-data">
                                                 <i class="fa fa-clock-o"></i>
@@ -244,7 +247,7 @@ z-index: 999999">
                                     <div class="data">
                                         <div class="row">
                                             <div class="col-2">
-                                                <img src="public/admin/img/mailbox_imgs/6.jpg" class="message-img avatar rounded-circle"
+                                                <img src="/public/admin/img/mailbox_imgs/6.jpg" class="message-img avatar rounded-circle"
                                                      alt="avatar1"></div>
                                             <div class="col-10 message-data">
                                                 <i class="fa fa-clock-o"></i>
@@ -259,7 +262,7 @@ z-index: 999999">
                                     <div class="data">
                                         <div class="row">
                                             <div class="col-2">
-                                                <img src="public/admin/img/mailbox_imgs/1.jpg" class="message-img avatar rounded-circle"
+                                                <img src="/public/admin/img/mailbox_imgs/1.jpg" class="message-img avatar rounded-circle"
                                                      alt="avatar1"></div>
                                             <div class="col-10 message-data">
                                                 <i class="fa fa-clock-o"></i>
@@ -274,7 +277,7 @@ z-index: 999999">
                                     <div class="data">
                                         <div class="row">
                                             <div class="col-2">
-                                                <img src="public/admin/img/mailbox_imgs/2.jpg" class="message-img avatar rounded-circle"
+                                                <img src="/public/admin/img/mailbox_imgs/2.jpg" class="message-img avatar rounded-circle"
                                                      alt="avatar1"></div>
                                             <div class="col-10 message-data">
                                                 <i class="fa fa-clock-o"></i>
@@ -289,7 +292,7 @@ z-index: 999999">
                                     <div class="data">
                                         <div class="row">
                                             <div class="col-2">
-                                                <img src="public/admin/img/mailbox_imgs/3.jpg" class="message-img avatar rounded-circle"
+                                                <img src="/public/admin/img/mailbox_imgs/3.jpg" class="message-img avatar rounded-circle"
                                                      alt="avatar1"></div>
                                             <div class="col-10 message-data">
                                                 <i class="fa fa-clock-o"></i>
@@ -304,7 +307,7 @@ z-index: 999999">
                                     <div class="data">
                                         <div class="row">
                                             <div class="col-2">
-                                                <img src="public/admin/img/mailbox_imgs/6.jpg" class="message-img avatar rounded-circle"
+                                                <img src="/public/admin/img/mailbox_imgs/6.jpg" class="message-img avatar rounded-circle"
                                                      alt="avatar1"></div>
                                             <div class="col-10 message-data">
                                                 <i class="fa fa-clock-o"></i>
@@ -319,7 +322,7 @@ z-index: 999999">
                                     <div class="data">
                                         <div class="row">
                                             <div class="col-2">
-                                                <img src="public/admin/img/mailbox_imgs/1.jpg" class="message-img avatar rounded-circle"
+                                                <img src="/public/admin/img/mailbox_imgs/1.jpg" class="message-img avatar rounded-circle"
                                                      alt="avatar1"></div>
                                             <div class="col-10 message-data">
                                                 <i class="fa fa-clock-o"></i>
@@ -348,7 +351,7 @@ z-index: 999999">
                     <div class="btn-group">
                         <div class="user-settings no-bg">
                             <button type="button" class="btn btn-default no-bg micheal_btn" data-toggle="dropdown">
-                                <img src="public/admin/img/admin.jpg" class="admin_img2 img-thumbnail rounded-circle avatar-img"
+                                <img src="/public/admin/img/admin.jpg" class="admin_img2 img-thumbnail rounded-circle avatar-img"
                                      alt="avatar"> <strong>Micheal</strong>
                                 <span class="fa fa-sort-down white_bg"></span>
                             </button>
