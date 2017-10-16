@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>eCard</title>
-    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"/>
-    <link rel="stylesheet" type="text/css" href="/public/css/swiper.min.css"/>
-    <link rel="stylesheet" href="/public/css/app.css">
+    <link rel="stylesheet" type="text/css" href="public/css/swiper.min.css"/>
+    <link rel="stylesheet" href="public/css/app.css">
     <script>
         document.documentElement.className = 'js';
     </script>
@@ -20,7 +20,7 @@
         <!-- Logo change per events ecard_logo_{category_code_name}.png
 		if not exit return ecard_logo_.png
 		-->
-        <img src="/public/images/ecard_logo.png" alt="">
+        <img src="public/images/ecard_logo.png" alt="">
     </a>
     <!-- Navigation can edit on AdminCP -->
     <nav class="m-hide">
