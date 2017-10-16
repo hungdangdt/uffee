@@ -2,7 +2,7 @@
 <html class="no-js" lang="vi">
 <head>
     <!--======= title =======-->
-    <title><?php echo !empty($title)?$title:'Ecard Admin Panel'; ?>></title>
+    <title><?php echo !empty($title)?$title:'Ecard Admin Panel'; ?></title>
     <!--======= end title =======-->
 
     <!--======= meta =======-->
@@ -11,8 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php
     if (!empty($meta) AND is_array($meta)) {
-        foreach ($meta as $v) {
-            echo chr(9).$v.chr(10);
+	    foreach ($meta as $k=>$v) {
+		    if ($k != 0){
+			    echo chr(9);
+		    }
+		    echo $v.chr(10);
         }
     }
     ?>
@@ -24,8 +27,11 @@
     <!--======= Page style =======-->
     <?php
     if (!empty($style) AND is_array($style)) {
-        foreach ($style as $v) {
-            echo chr(9).$v.chr(10);
+	    foreach ($style as $k=>$v) {
+		    if ($k != 0){
+			    echo chr(9);
+		    }
+		    echo "<link type='text/css' rel='stylesheet' href='/public/admin/{$v}'/>".chr(10);
         }
     }
     ?>

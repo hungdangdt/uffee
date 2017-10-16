@@ -30,22 +30,21 @@ class Admin extends CI_Controller{
         checkLogin();
         $data = array(
             'style' => array(
-                "<link type='text/css' rel='stylesheet' href='/public/admin/vendors/chartist/css/chartist.min.css'/>",
-                "<link type='text/css' rel='stylesheet' href='/public/admin/vendors/circliful/css/jquery.circliful.css'>",
-                "<link type='text/css' rel='stylesheet' href='/public/admin/css/pages/index.css'>",
-                "<link type='text/css' rel='stylesheet' href='#' id='skin_change'/>",
+                "vendors/chartist/css/chartist.min.css",
+                "vendors/circliful/css/jquery.circliful.css",
+                "css/pages/index.css",
             ),
             'script' => array(
-                "<script type='text/javascript' src='/public/admin/vendors/countUp.js/js/countUp.min.js'></script>",
-                "<script type='text/javascript' src='/public/admin/vendors/flip/js/jquery.flip.min.js'></script>",
-                "<script type='text/javascript' src='/public/admin/js/pluginjs/jquery.sparkline.js'></script>",
-                "<script type='text/javascript' src='/public/admin/vendors/chartist/js/chartist.min.js'></script>",
-                "<script type='text/javascript' src='/public/admin/js/pluginjs/chartist-tooltip.js'></script>",
-                "<script type='text/javascript' src='/public/admin/vendors/swiper/js/swiper.min.js'></script>",
-                "<script type='text/javascript' src='/public/admin/vendors/circliful/js/jquery.circliful.min.js'></script>",
-                "<script type='text/javascript' src='/public/admin/vendors/flotchart/js/jquery.flot.js' ></script>",
-                "<script type='text/javascript' src='/public/admin/vendors/flotchart/js/jquery.flot.resize.js'></script>",
-                "<script type='text/javascript' src='/public/admin/js/pages/index.js'></script>",
+               "vendors/countUp.js/js/countUp.min.js",
+                "vendors/flip/js/jquery.flip.min.js",
+                "js/pluginjs/jquery.sparkline.js",
+                "vendors/chartist/js/chartist.min.js",
+                "js/pluginjs/chartist-tooltip.js",
+                "vendors/swiper/js/swiper.min.js",
+                "vendors/circliful/js/jquery.circliful.min.js",
+                "vendors/flotchart/js/jquery.flot.js",
+                "vendors/flotchart/js/jquery.flot.resize.js",
+                "js/pages/index.js",
             ),
         );
         $this->load->view('Admin/index',$data);
@@ -90,19 +89,19 @@ class Admin extends CI_Controller{
         */
         $data = array(
             'style' => array(
-                "<link type='text/css' rel='stylesheet' href='/public/admin/css/components.css'/>",
-                "<link type='text/css' rel='stylesheet' href='/public/admin/css/custom.css'/>",
-                "<link type='text/css' rel='stylesheet' href='/public/admin/vendors/bootstrapvalidator/css/bootstrapValidator.min.css'/>",
-                "<link type='text/css' rel='stylesheet' href='/public/admin/vendors/wow/css/animate.css'>",
-                "<link type='text/css' rel='stylesheet' href='/public/admin/css/pages/login1.css'>",
+                "css/components.css",
+                "css/custom.css",
+                "vendors/bootstrapvalidator/css/bootstrapValidator.min.css",
+                "vendors/wow/css/animate.css",
+                "css/pages/login1.css",
             ),
             'script' => array(
-                "<script type='text/javascript' src='/public/admin/js/jquery.min.js'></script>",
-                "<script type='text/javascript' src='/public/admin/js/tether.min.js'></script>",
-                "<script type='text/javascript' src='/public/admin/js/bootstrap.min.js'></script>",
-                "<script type='text/javascript' src='/public/admin/vendors/bootstrapvalidator/js/bootstrapValidator.min.js'></script>",
-                "<script type='text/javascript' src='/public/admin/vendors/wow/js/wow.min.js'></script>",
-                "<script type='text/javascript' src='/public/admin/js/pages/login1.js'></script>",
+                "js/jquery.min.js",
+                "js/tether.min.js",
+                "js/bootstrap.min.js",
+                "vendors/bootstrapvalidator/js/bootstrapValidator.min.js",
+                "vendors/wow/js/wow.min.js",
+                "js/pages/login1.js",
             ),
         );
         //set error to display
@@ -115,7 +114,35 @@ class Admin extends CI_Controller{
     }
 
     function users(){
-
+	    $data = array(
+		    'style' => array(
+			    "vendors/select2/css/select2.min.css",
+			    "vendors/datatables/css/scroller.bootstrap.min.css",
+			    "vendors/datatables/css/colReorder.bootstrap.min.css",
+			    "vendors/datatables/css/dataTables.bootstrap.min.css",
+			    "css/pages/dataTables.bootstrap.css",
+			    "css/plugincss/responsive.dataTables.min.css",
+			    "css/pages/tables.css",
+		    ),
+		    'script' => array(
+			    "vendors/select2/js/select2.js",
+			    "vendors/datatables/js/jquery.dataTables.min.js",
+			    "js/pluginjs/dataTables.tableTools.js",
+			    "vendors/datatables/js/dataTables.colReorder.min.js",
+			    "vendors/datatables/js/dataTables.bootstrap.min.js",
+			    "vendors/datatables/js/dataTables.buttons.min.js",
+			    "js/pluginjs/jquery.dataTables.min.js",
+			    "vendors/datatables/js/dataTables.responsive.min.js",
+			    "vendors/datatables/js/dataTables.rowReorder.min.js",
+			    "vendors/datatables/js/buttons.colVis.min.js",
+			    "vendors/datatables/js/buttons.html5.min.js",
+			    "vendors/datatables/js/buttons.bootstrap.min.js",
+			    "vendors/datatables/js/buttons.print.min.js",
+			    "vendors/datatables/js/dataTables.scroller.min.js",
+			    "js/pages/datatable.js",
+		    ),
+	    );
+	    $this->load->view('Admin/users',$data);
     }
 
 }

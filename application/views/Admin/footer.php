@@ -6,8 +6,11 @@
 <!--======= Page script =======-->
 <?php
 if (!empty($script) AND is_array($script)) {
-    foreach ($script as $v) {
-        echo $v.chr(10);
+    foreach ($script as $k=>$v) {
+        if ($k != 0){
+            echo chr(9);
+        }
+        echo "<script type='text/javascript' src='/public/admin/{$v}'></script>".chr(10);
     }
 }
 ?>
