@@ -53,11 +53,11 @@ z-index: 999999">
                         </h3>
                     </div>
                     <div class="bg-white login_content login_border_radius">
-                        <ul>
+                        <ul style="text-align:left;color:red;">
                         <?php
                             if(!empty($errors)){
                                 foreach ($errors as $error){
-                                    echo $error;
+                                    echo "<li>$error</li>";
                                 }
                             }
                         ?>
@@ -73,7 +73,7 @@ z-index: 999999">
                             </div>
                             <!--</h3>-->
                             <div class="form-group">
-                                <label for="password" class="col-form-label">Password</label>
+                                <label for="password" class="col-form-label">Mật khẩu</label>
                                 <div class="input-group">
                                     <span class="input-group-addon addon_password"><i
                                                 class="fa fa-lock text-primary"></i></span>
@@ -83,7 +83,7 @@ z-index: 999999">
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <input type="submit" value="Log In" class="btn btn-primary btn-block login_button">
+                                        <input type="submit" value="Đăng Nhập" class="btn btn-primary btn-block login_button">
                                     </div>
                                 </div>
                             </div>
@@ -94,11 +94,11 @@ z-index: 999999">
                                         <label class="custom-control custom-checkbox">
                                             <input type="checkbox" name="slogin" class="custom-control-input form-control">
                                             <span class="custom-control-indicator"></span>
-                                            <a class="custom-control-description">Keep me logged in</a>
+                                            <a class="custom-control-description">Luôn đăng nhập</a>
                                         </label>
                                     </div>
                                     <div class="col-6 text-right forgot_pwd">
-                                        <a href="forgot_password1.html" class="custom-control-description forgottxt_clr">Forgot password?</a>
+                                        <a href="forgot_password1.html" class="custom-control-description forgottxt_clr">Quên mật khẩu?</a>
                                     </div>
                                 </div>
                             </div>

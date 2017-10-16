@@ -11,6 +11,7 @@
  * Class Admin
  * @property Admin admin_control
  * @property Admin_model admin_model
+ * @property Cdebug cdebug
  */
 class Admin extends CI_Controller{
     /**
@@ -19,9 +20,7 @@ class Admin extends CI_Controller{
     function __construct()
     {
         parent::__construct();
-        $this->load->library('cdebug');
         $this->load->model('admin_model');
-        $this->load->helper('cookie');
     }
 
     /**
@@ -49,7 +48,7 @@ class Admin extends CI_Controller{
                 "<script type='text/javascript' src='public/admin/vendors/circliful/js/jquery.circliful.min.js'></script>",
                 "<script type='text/javascript' src='public/admin/vendors/flotchart/js/jquery.flot.js' ></script>",
                 "<script type='text/javascript' src='public/admin/vendors/flotchart/js/jquery.flot.resize.js'></script>",
-                "<script type='text/javascript' src='public/admin/js/pages/index.js'></script>",    
+                "<script type='text/javlologinđdascript' src='public/admin/js/pages/index.js'></script>",
             ),
         );
         $this->load->view('Admin/index',$data);
@@ -67,13 +66,21 @@ class Admin extends CI_Controller{
             $p_email = !empty($_POST['email'])?$_POST['email']:null;
             $p_password = !empty($_POST['password'])?$_POST['password']:null;
             $p_slogin = !empty($_POST['slogin'])?$_POST['slogin']:null;
-
+            $this->cdebug->showDebug(md5($p_password));
             //Check email and password
             if(!empty($p_email) AND !empty($p_password)){
                 //check user exist and right password
                 $iUser = $this->admin_model->getUser($p_email,md5($p_password));
                 if(!empty($iUser)){
-                    $this->input->set_cookie('userInfo',json_encode($iUser,JSON_UNESCAPED_UNICODE));
+                    $sUser = array(
+                        'id' => $iUser['id'],
+                        'email' => $iUser['email'],
+                        'level' => $iUser['level'],
+                        'status' => 'online',
+                        'time' => time(),
+                    );
+                    $this->session->set_userdata('iUser',json_encode($iUser));
+                    redirect('/admin');
                 }else{
                     $errors[] = 'Email và mật khẩu không đúng. Vui lòng kiểm tra và thử lại';
                 }
