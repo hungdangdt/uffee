@@ -11,11 +11,11 @@
 </footer>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-<script src="/public/js/popper.min.js"></script>
-<script src="/public/js/bootstrap.min.js"></script>
-<script src="/public/js/anime.min.js"></script>
-<script src="/public/js/imagesloaded.pkgd.min.js"></script>
-<script src="/public/js/swiper.jquery.min.js"></script>
-<script src="/public/js/app.js"></script>
+<script src="public/js/popper.min.js"></script>
+<script src="public/js/bootstrap.min.js"></script>
+<script src="public/js/anime.min.js"></script>
+<script src="public/js/imagesloaded.pkgd.min.js"></script>
+<script src="public/js/swiper.jquery.min.js"></script>
+<script src="public/js/app.js"></script>
 </body>
 </html>
