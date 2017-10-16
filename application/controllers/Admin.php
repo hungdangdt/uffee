@@ -11,8 +11,6 @@
  * Class Admin
  * @property Admin admin_control
  * @property Admin_model admin_model
- * @property Cdebug cdebug
- * @property Login  login
  */
 class Admin extends CI_Controller{
     /**
@@ -68,7 +66,7 @@ class Admin extends CI_Controller{
             $p_email = !empty($_POST['email'])?$_POST['email']:null;
             $p_password = !empty($_POST['password'])?$_POST['password']:null;
             $p_slogin = !empty($_POST['slogin'])?$_POST['slogin']:null;
-            $this->cdebug->showDebug(md5($p_password));
+            dieDebug(md5($p_password));
             //Check email and password
             if(!empty($p_email) AND !empty($p_password)){
                 //check user exist and right password
@@ -115,6 +113,6 @@ class Admin extends CI_Controller{
     }
 
     function logout(){
-        logout();
+        ulogout();
     }
 }

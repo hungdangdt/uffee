@@ -42,3 +42,36 @@ if(!function_exists('logout')) {
         redirect('admin/login');
     }
 }
+
+if(!function_exists('showDebug')) {
+    function showDebug()
+    {
+        if (func_num_args() > 0 AND !empty(DEBUG_MODE)) {
+            echo '<pre>----------------- BEGIN DEBUG -------------------<br/>';
+            echo '|<br/>';
+            foreach (func_get_args() as $k => $v) {
+                echo "| [$k] => ";
+                print_r($v);
+            }
+            echo '<br/>|<br/>';
+            echo '------------------ END DEBUG --------------------</pre>';
+        }
+    }
+}
+
+if(!function_exists('dieDebug')) {
+    function dieDebug()
+    {
+        if (func_num_args() > 0 AND !empty(DEBUG_MODE)) {
+            echo '<pre>----------------- BEGIN DEBUG -------------------<br/>';
+            echo '|<br/>';
+            foreach (func_get_args() as $k => $v) {
+                echo "| [$k] => ";
+                print_r($v);
+            }
+            echo '<br/>|<br/>';
+            echo '------------------ END DEBUG --------------------</pre>';
+        }
+        die;
+    }
+}
