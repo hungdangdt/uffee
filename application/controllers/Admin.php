@@ -7,15 +7,26 @@
  */
 /*========================================*/
 
+/**
+ * Class Admin
+ * @property Admin admin_control
+ * @property Admin_model admin_model
+ */
 class Admin extends CI_Controller{
+    /**
+     * Admin constructor.
+     */
     function __construct()
     {
         parent::__construct();
-        $this->load->library('cdebug');
         $this->load->model('admin_model');
     }
 
+    /**
+     *
+     */
     public function index(){
+        checkLogin();
         $data = array(
             'style' => array(
                 "<link type='text/css' rel='stylesheet' href='public/admin/css/components.css'/>",
@@ -37,13 +48,17 @@ class Admin extends CI_Controller{
                 "<script type='text/javascript' src='public/admin/vendors/circliful/js/jquery.circliful.min.js'></script>",
                 "<script type='text/javascript' src='public/admin/vendors/flotchart/js/jquery.flot.js' ></script>",
                 "<script type='text/javascript' src='public/admin/vendors/flotchart/js/jquery.flot.resize.js'></script>",
-                "<script type='text/javascript' src='public/admin/js/pages/index.js'></script>",    
+                "<script type='text/javlologinđdascript' src='public/admin/js/pages/index.js'></script>",
             ),
         );
         $this->load->view('Admin/index',$data);
     }
 
+    /**
+     *
+     */
     public function login(){
+        $errors = array();
         /**
          * Check Login Submit
         */
@@ -51,15 +66,23 @@ class Admin extends CI_Controller{
             $p_email = !empty($_POST['email'])?$_POST['email']:null;
             $p_password = !empty($_POST['password'])?$_POST['password']:null;
             $p_slogin = !empty($_POST['slogin'])?$_POST['slogin']:null;
-
+            dieDebug(md5($p_password));
             //Check email and password
             if(!empty($p_email) AND !empty($p_password)){
                 //check user exist and right password
                 $iUser = $this->admin_model->getUser($p_email,md5($p_password));
                 if(!empty($iUser)){
-
+                    $sUser = array(
+                        'id' => $iUser['id'],
+                        'email' => $iUser['email'],
+                        'level' => $iUser['level'],
+                        'status' => 'online',
+                        'time' => time(),
+                    );
+                    $this->session->set_userdata('iUser',json_encode($sUser));
+                    redirect('/admin');
                 }else{
-                    $this->cdebug->dieDebug('No User');
+                    $errors[] = 'Email và mật khẩu không đúng. Vui lòng kiểm tra và thử lại';
                 }
             }
         }
@@ -84,6 +107,12 @@ class Admin extends CI_Controller{
                 "<script type='text/javascript' src='public/admin/js/pages/login1.js'></script>",
             ),
         );
+        //set error to display
+        $data['errors'] = $errors;
         $this->load->view('Admin/login',$data);
+    }
+
+    function logout(){
+        ulogout();
     }
 }

@@ -7,8 +7,15 @@
  */
 /*========================================*/
 
+/**
+ * Class Admin_model
+ * @property Admin_model admin_model
+ */
 class Admin_model extends CI_Model{
 
+    /**
+     * Admin_model constructor.
+     */
     function __construct()
     {
         parent::__construct();
@@ -16,7 +23,12 @@ class Admin_model extends CI_Model{
 
     }
 
-    function getUser($userEmail,$userPass){
+    /**
+     * @param $userEmail
+     * @param $userPass
+     * @return array|bool
+     */
+    function getUser($userEmail, $userPass){
         $array_where = array(
             'email' => $userEmail,
             'password' => $userPass
