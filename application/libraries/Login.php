@@ -19,15 +19,18 @@ class Login
 
     function checkLogin()
     {
+        $logged = false;
         if (!empty($iUser = $this->CI->session->userdata('iUser'))) {
             if ($iUser['status'] == 'online') {
-                if (strtotime($iUser['time']) - time() >= 24) {
-                    $this->logout();
+                if (strtotime($iUser['time']) - time() <= 24) {
+                    $logged = true;
                 }
             }
         }
-        $this->logout();
-
+        if(empty($logged))
+            $this->logout();
+        else
+            return true;
     }
 
     function logout(){

@@ -12,6 +12,7 @@
  * @property Admin admin_control
  * @property Admin_model admin_model
  * @property Cdebug cdebug
+ * @property Login  login
  */
 class Admin extends CI_Controller{
     /**
@@ -27,6 +28,7 @@ class Admin extends CI_Controller{
      *
      */
     public function index(){
+        $this->login->checkLogin();
         $data = array(
             'style' => array(
                 "<link type='text/css' rel='stylesheet' href='public/admin/css/components.css'/>",
